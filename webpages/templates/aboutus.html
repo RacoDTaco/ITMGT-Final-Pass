@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    {% include "headerlogin.html" %}
+<head>
+	<title>Login Page</title>
+	<style>
+            body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color:#1899DF;
+      text-decoration: #EEEEEE;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      justify-content: flex-start; /* Change this to align all header items to the left */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      width: 50px;
+      height: auto;
+    }
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .header-items {
+        
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color:#EEEEEE;
+      margin-left: auto; /* Add this to move the header items to the right */
+      font-weight: bold;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      border-radius: 3px;
+    }
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      flex-grow: 1;
+    }
+    .search-bar button {
+      cursor: pointer;
+      
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: none;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .transaction-form {
+      margin-top: 20px;
+    }
+    .transaction-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .transaction-form input[type="number"],
+    .transaction-form select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    .transaction-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .transaction-form button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #1899DF;
+      color: #EEEEEE;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+  button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3e8e41;
+  }
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+		
+		.container {
+			width: 1600px;
+                        height: 900px;
+			background-color: #fff;
+			padding: 50px;
+			margin: 60px auto;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+			border-radius: 10px;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+			color: #333;
+		}
+		
+		.form-group {
+			margin-bottom: 20px;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		input[type="text"],
+		input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		
+		button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="height:150px">
+		<h1>Mission</h1>
+		<form>
+			<div class="form-group">
+				<label for="username">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+			</div>
+		</form>
+	</div>	
+  <div class="container" style="height:500px">
+		<h1>Meet the Team</h1>
+                <table>
+                  <tr>
+                    <td style="width:60px; text-align:center">
+                      <img src="{{ url_for('static', filename='pics/tim.jpg') }}" size="20" style="height:340px" /></a>
+                    </td>
+                    
+                    <td style="width:60px; text-align:center">
+                            <img src="{{ url_for('static', filename='pics/tuz.jpg') }}" size="20" style="height:340px" /></a>
+                    </td>
+                    
+                    <td style="width:60px; text-align:center">
+                            <img src="{{ url_for('static', filename='pics/jet.jpg') }}" size="20" style="height:340px" /></a>
+                    </td>
+
+                    <td style="width:60px; text-align:center">
+                            <img src="{{ url_for('static', filename='pics/joaq.jpg') }}" size="20" style="height:340px" /></a>
+                    </td>
+                    
+                    <td style="width:60px; text-align:center">
+                            <img src="{{ url_for('static', filename='pics/raco.jpg') }}" size="20" style="height:340px" /></a>
+                    </td>
+                    
+                  <tr style="width:60px; text-align:center">
+                    <td style="width:60px; text-align:center">
+                      <a>Timothy Banawa</a>
+                    </td>
+
+                    <td style="width:60px; text-align:center">
+                      <a>Artuz Cezar</a>
+                    </td>
+
+                    <td style="width:60px; text-align:center">
+                      <a>Jet Dela Cruz</a>
+                    </td>
+                    
+                    <td style="width:60px; text-align:center">
+                      <a>Joaquin Mendoza</a>
+                    </td>
+                    
+                    <td style="width:60px; text-align:center">
+                      <a>Raco Santos</a>
+                    </td>         
+                  </tr>
+                </table>
+	</div>
+
+  <div class="container" style="height:250px">
+		<h1>Our Story</h1>
+		<form>
+			<div class="form-group">
+				<label for="username">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </label>
+				
+			</div>
+		</form>
+	</div>
+
+        
+</body>
+{% include "footer.html" %}
+</html>

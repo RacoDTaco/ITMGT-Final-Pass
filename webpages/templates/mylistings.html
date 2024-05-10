@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "headerlogout.html" %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color:#1899DF;
+      text-decoration: #EEEEEE;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      justify-content: flex-start; /* Change this to align all header items to the left */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      width: 50px;
+      height: auto;
+    }
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .header-items {
+        
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color:#EEEEEE;
+      margin-left: auto; /* Add this to move the header items to the right */
+      font-weight: bold;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      border-radius: 3px;
+    }
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      flex-grow: 1;
+    }
+    .search-bar button {
+      cursor: pointer;
+      
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: none;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .transaction-form {
+      margin-top: 20px;
+    }
+    .transaction-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .transaction-form input[type="number"],
+    .transaction-form select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    .transaction-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .transaction-form button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #1899DF;
+      color: #EEEEEE;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+  button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3e8e41;
+  }
+  .container {
+    width: 1600px;
+                      height: 900px;
+    background-color: #fff;
+    padding: 50px;
+    margin: 60px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+</style>
+
+
+  </style>
+</head>
+<body>
+  <div class="container" style="height:600px">
+    <h1 style="text-align: center;"> My Listings</h1>
+    <table style="border:1px solid #ddd;">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Availability</th>
+          <th>Amount</th>
+          <th>Payment Status</th>
+          <th>Ticket Status</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>May 2, 2024</td>
+          <td>Firefly's Concert</td>
+          <td>Sold</td>
+          <td>Php 500.00</td>
+          <td>Payment Received</td>
+          <td>Delivered</td>
+        </tr>
+
+        <tr>
+            <td>May 2, 2024</td>
+            <td>Rodrigo's Final Night</td>
+            <td>Sold</td>
+            <td>Php 500.00</td>
+            <td>Payment Held</td>
+            <td>In Transit</td>
+        </tr>
+        <tr>
+            <td>November 11, 2025</td>
+            <td>Sunday's Midnight Bonanza</td>
+            <td>Sold</td>
+            <td>Php 800.00</td>
+            <td>Payment Held</td>
+            <td>In Transit</td>
+        </tr>
+
+        <tr>
+            <td>December 2, 2026</td>
+            <td>Rodrigo's Final Night</td>
+            <td>Available</td>
+            <td>Php 700.00</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>May 2, 2024</td>
+            <td>Rodrigo's Final Night</td>
+            <td>Sold</td>
+            <td>Php 500.00</td>
+            <td>Payment Held</td>
+            <td>With Seller</td>
+        </tr>
+        <tr>
+            <td>May 8, 2025</td>
+            <td>Robin's Release</td>
+            <td>Available</td>
+            <td>Php 1000.00</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>May 9, 2025</td>
+            <td>Charmony Festival</td>
+            <td>Sold</td>
+            <td>Php 700.00</td>
+            <td>Payment Held</td>
+            <td>In Transit</td>
+        </tr>
+        <tr>
+            <td>May 1, 2026</td>
+            <td>Fortnite Festival</td>
+            <td>Sold</td>
+            <td>Php 450.00</td>
+            <td>Payment Received</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>May 2, 2024</td>
+            <td>Rodrigo's Final Night</td>
+            <td>Sold</td>
+            <td>Php 500.00</td>
+            <td>Payment Held</td>
+            <td>In Transit</td>
+        </tr>
+        <tr>
+            <td>April 15, 2025</td>
+            <td>Damaso's Kumpisal</td>
+            <td>Available</td>
+            <td>Php 300.00</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>June 25, 2025</td>
+            <td>Theodore Party Night</td>
+            <td>Available</td>
+            <td>Php 500.00</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+          
+
+
+        
+      </tbody>
+    </table>
+  
+      </form>
+    </div>
+  </div>
+</body>
+{% include "footer.html" %}
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    {% include "headerlogout.html" %}
+<head>
+	<title>Login Page</title>
+	<style>
+            body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color:#1899DF;
+      text-decoration: #EEEEEE;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      justify-content: flex-start; /* Change this to align all header items to the left */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      width: 50px;
+      height: auto;
+    }
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .header-items {
+        
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color:#EEEEEE;
+      margin-left: auto; /* Add this to move the header items to the right */
+      font-weight: bold;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      border-radius: 3px;
+    }
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      flex-grow: 1;
+    }
+    .search-bar button {
+      cursor: pointer;
+      
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: none;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .transaction-form {
+      margin-top: 20px;
+    }
+    .transaction-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .transaction-form input[type="number"],
+    .transaction-form select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    .transaction-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .transaction-form button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #1899DF;
+      color: #EEEEEE;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+  button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3e8e41;
+  }
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+		
+		.container {
+			width: 800px;
+            height: 1000px;
+			background-color: #fff;
+			padding: 20px;
+			margin: 50px auto;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+			border-radius: 5px;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+			color: #333;
+		}
+		
+		.form-group {
+			margin-bottom: 20px;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		input[type="text"],
+		input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		
+		button[type="submit"] {
+
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="text-align: left;">Kendrick Lamar's Final Fight</h1>
+        <h1 style="text-align: left; font-size:20px">Event Details</h1>
+        <a href="#"><img src="{{ url_for('static', filename='pics/kendrickposter.jpg') }}" size="300" style="height:200px; width:150px; display:block; margin:auto" /></a>
+		<form>
+			<div class="form-group">
+				<label for="username"> Code: KL-04</label>
+				<a>  </a>
+			</div>
+			<div class="form-group">
+				<label for="username"> Date: July 16, 2024 </label>
+				<a>  </a>
+			</div>
+
+            <div class="form-group">
+				<label for="username"> Venue: Philippine Arena </label>
+				<a>  </a>
+			</div>
+            <div class="form-group">
+				<label for="username"> Kendrick Lamar is a highly acclaimed American rapper, songwriter, and record producer known for his profound lyricism, innovative storytelling, and social commentary. Born on June 17, 1987, in Compton, California, Lamar emerged as a prominent figure in hip-hop during the 2010s.</label>
+				<a>  </a>
+			</div>
+            <br>
+			<br>
+      <h1 style="text-align: left; font-size:20px">Seating Map</h1>
+      <a href="#"><img src="{{ url_for('static', filename='pics/seatingmap.png') }}" size="300" style="height:350px; width:800px" /></a>
+		</form>
+	</div>
+	<div class="container"			style="width: 800px; height: 825px;background-color: #fff;padding: 20px;margin: 50px auto;box-shadow: 0px 0px 10px rgba(0,0,0,0.1);border-radius: 5px;">
+		<h1 style="text-align: left;">Kendrick Lamar's Final Fight</h1>
+        <h1 style="text-align: left; font-size:20px">Ticket Listings</h1>
+		<form>
+			<div class="form-group">
+				<label for="username">Reseller: Drake Wolfsbane</label>
+        <label for="username">Section: 106</label>
+        <label for="username">Quantity: 4</label>
+        <label for="username">Price: Php 5,000.00 per ticket</label>
+        <label for="username">Remarks: Adjacent seats. Price negotiable!</label>
+			</div>
+        <button type="submit">Contact Seller</button>
+          <br><br>
+          <hr>
+      <div class="form-group">
+        <br>
+        <label for="username">Reseller: Sykkuno</label>
+        <label for="username">Section: VIP Floor</label>
+        <label for="username">Quantity: 1</label>
+        <label for="username">Price: Php 10,000.00 per ticket</label>
+        <label for="username">Remarks: Price Non-negotiable</label>
+      </div>
+            
+        <button type="submit">Contact Seller</button>
+        <br><br>
+        <hr>
+        <div class="form-group">
+          <br>
+          <label for="username">Reseller: Johnny</label>
+          <label for="username">Section: 408</label>
+          <label for="username">Quantity: 11</label>
+          <label for="username">Price: Php 2,000.00 per ticket</label>
+          <label for="username">Remarks: 5 Adjacent seats. Price negotiable</label>
+        </div>
+        <button type="submit">Contact Seller</button>
+        <br><br>        
+          
+        <button style="font-size: 25px; position: center; display:block; width:200px;margin:0 auto" type="submit" class="center-button" >More Options</button>
+            
+			
+
+
+            
+		</form>
+	</div>
+</body>
+{% include "footer.html" %}
+</html>
